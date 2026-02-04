@@ -31,8 +31,11 @@ cd /caminho/para/o/maildir/do/usuario
 ### 2. Execute o Migrador
 Execute o comando abaixo:
 ```bash
-curl -sSL https://raw.githubusercontent.com/sr00t3d/maildir-to-mbox/refs/heads/main/maildir-mbox.sh | bash
+bash <(curl -sSL https://raw.githubusercontent.com/sr00t3d/maildir-to-mbox/main/maildir-mbox.sh)
 ```
+
+### 3. Selecione o perfil da CPU
+
 
 ### 📂 Como Restaurar no Thunderbird
 Após o script gerar o link e você baixar o arquivo .tar.gz, siga estes passos:
