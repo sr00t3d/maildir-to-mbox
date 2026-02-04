@@ -31,7 +31,7 @@ cd /caminho/para/o/maildir/do/usuario
 ### 2. Execute o Migrador
 Execute o comando abaixo:
 ```bash
-curl -sSL [url](url) | bash
+curl -sSL https://raw.githubusercontent.com/sr00t3d/maildir-to-mbox/refs/heads/main/maildir-mbox.sh | bash
 ```
 
 ### 📂 Como Restaurar no Thunderbird
