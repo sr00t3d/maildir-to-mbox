@@ -36,7 +36,8 @@ echo "✉️  Total de e-mails: $TOTAL_FILES"
 echo "----------------------------------------------------"
 
 # --- 3. Perfil e Countdown ---
-read -p "Escolha o perfil [A] Rápido [B] Lento: " OPTION
+#read -p "Escolha o perfil [A] Rápido [B] Lento: " OPTION
+read -p "Escolha o perfil [A] Rápido [B] Lento: " OPTION < /dev/tty
 [[ "$OPTION" =~ ^[Bb]$ ]] && NICE_VAL=19 || NICE_VAL=0
 
 echo -e "\n⚠️  Iniciando em 5 segundos... [CTRL+C] para cancelar."
