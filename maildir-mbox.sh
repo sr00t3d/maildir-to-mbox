@@ -39,11 +39,17 @@ echo "✉️  Total de e-mails: $TOTAL_FILES"
 echo "----------------------------------------------------"
 
 # --- 3. Perfil e Countdown ---
-read -p "Escolha o perfil [A] Rápido [B] Lento: " OPTION
+# Usamos echo + read para garantir a interatividade via pipe (url chamada direta)
+echo -n "Escolha o perfil [A] Rápido [B] Lento: "
+read OPTION < /dev/tty
+
 [[ "$OPTION" =~ ^[Bb]$ ]] && NICE_VAL=19 || NICE_VAL=0
 
 echo -e "\n⚠️  Iniciando em 5 segundos... [CTRL+C] para cancelar."
-for i in {5..1}; do echo -ne "Aguarde... $i \r"; sleep 1; done
+for i in {5..1}; do 
+    echo -ne "Aguarde... $i \r"
+    sleep 1
+done
 echo -e "\n🚀 Processando...\n"
 
 # --- 4. Conversão e Criação de Estrutura ---
