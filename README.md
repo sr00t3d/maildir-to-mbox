@@ -34,7 +34,17 @@ Execute o comando abaixo:
 bash <(curl -sSL https://raw.githubusercontent.com/sr00t3d/maildir-to-mbox/main/maildir-mbox.sh)
 ```
 
+<img width="506" height="128" alt="image" src="https://github.com/user-attachments/assets/4d72fecd-e12c-407b-88d1-9da57c52805b" />
+
 ### 3. Selecione o perfil da CPU
+
+<img width="395" height="32" alt="image" src="https://github.com/user-attachments/assets/fb7cd5cc-7fe0-4402-a066-6506d66a9443" />
+
+### 4. Aguarde a conversão
+<img width="668" height="170" alt="image" src="https://github.com/user-attachments/assets/7fcb9a1c-8764-401a-ad22-a644f2f94993" />
+
+### 5. Localize o arquivo gerado
+<img width="444" height="300" alt="image" src="https://github.com/user-attachments/assets/73efbf70-9aff-48a1-bf3f-7497da2ec1d7" />
 
 
 ### 📂 Como Restaurar no Thunderbird
@@ -42,15 +52,27 @@ Após o script gerar o link e você baixar o arquivo .tar.gz, siga estes passos:
 
 Extraia o arquivo no seu computador local.
 
+<img width="582" height="220" alt="image" src="https://github.com/user-attachments/assets/220efb10-7655-45ca-9f66-1d95490da50e" />
+
 No Thunderbird, vá em Configurações da Conta > Pastas Locais (Local Folders).
 
+<img width="294" height="129" alt="image" src="https://github.com/user-attachments/assets/4afc8264-a55a-4af0-b8c0-d26827bb997e" />
+
 Verifique o caminho em Diretório Local.
+
+<img width="784" height="111" alt="image" src="https://github.com/user-attachments/assets/60a08d97-71b6-4473-918a-11f940c6bfb0" />
 
 Feche o Thunderbird.
 
 Copie os arquivos extraídos (ex: INBOX_Principal, Sent, Meus-Trabalho) para dentro desta pasta no Windows/Linux/Mac.
 
-Abra o Thunderbird e as pastas aparecerão magicamente no menu lateral.
+<img width="1084" height="260" alt="image" src="https://github.com/user-attachments/assets/a71df04f-a31d-4c8c-9644-3d57d965e3c1" />
+
+Abra o Thunderbird e as pastas e email aparecerão magicamente no menu lateral.
+
+<img width="612" height="277" alt="image" src="https://github.com/user-attachments/assets/ce59d29c-3769-4fda-a146-22e27302cb84" />
+
+Agora mova os emails para as contas existentes em seu aplicativo Thunderbird
 
 ### 📋 Requisitos do Servidor
 - Linux (Debian, Ubuntu, CentOS, etc.)
