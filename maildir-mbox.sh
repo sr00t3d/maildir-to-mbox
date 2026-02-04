@@ -8,9 +8,6 @@
 # Utilização: curl -sSL https://raw.githubusercontent.com/... | bash
 # ==============================================================================
 
-exec 3<&0
-exec 0< /dev/tty
-
 # --- 1. Verificação de Ambiente ---
 if [ ! -d "cur" ] && [ ! -d ".Sent" ]; then
     echo "❌ Erro: Execute este script dentro da pasta raiz do e-mail."
