@@ -1,84 +1,80 @@
-# maildir-to-mbox
-Convert maildir directory (dovecot) to mbox files
+# Maildir to MBOX Converter 📧
 
-[![Bash Script](https://img.shields.io/badge/Language-Bash-green.svg)](https://www.gnu.org/software/bash/)
-[![Python 3](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+Readme: [Português](README.pt-br.md)
 
-Script profissional desenvolvido para automatizar a conversão de caixas de e-mail no formato **Maildir (Dovecot)** para o formato nativo do **Mozilla Thunderbird**, preservando 100% da hierarquia de pastas (mesmo pastas ocultas e vazias).
+![License](https://img.shields.io/github/license/sr00t3d/maildir-to-mbox)
+![Shell Script](https://img.shields.io/badge/language-Bash-green.svg)
+![Compatibility](https://img.shields.io/badge/compatible-Dovecot%20%7C%20Thunderbird-blue)
 
-## 🛠️ O que o script faz?
-
-- **Detecção Agressiva**: Localiza todas as subpastas (ex: `.Sent`, `.Archive`, `.Meus.Trabalhos`).
-- **Preservação de Hierarquia**: Converte a estrutura de pontos do Dovecot para um formato legível pelo Thunderbird.
-- **Segurança Operacional**: Verifica espaço em disco e permite escolher a carga de CPU (Nice 19 para servidores em produção).
-- **Countdown de Segurança**: 5 segundos para cancelamento antes de iniciar.
-- **Link de Download**: Gera automaticamente um link público com diretório aleatório para facilitar a coleta do backup.
+Professional script designed to automate the conversion of **Maildir (Dovecot)** email boxes to the **MBOX** format, natively compatible with **Mozilla Thunderbird**, preserving 100% of the folder hierarchy.
 
 ---
 
-## 🚀 Como utilizar (Quick Start)
+## ✨ Key Features
 
-Não é necessário baixar o script manualmente. Você pode executá-lo diretamente do GitHub no servidor onde os e-mails estão localizados.
+Unlike simple conversion scripts, this migrator was built for real-world SysAdmin scenarios:
 
-### 1. Acesse a pasta raiz do e-mail do usuário
-Geralmente localizada em `/home/usuario/mail/dominio.com.br/conta/`.
+- **Intelligent Detection**: Automatically locates hidden subfolders (e.g., `.Sent`, `.Archive`, `.Work.2023`).
+- **Hierarchy Preservation**: Translates Dovecot’s dot-separated directory structure into Thunderbird’s subfolder format.
+- **Operational Safety**:
+  - Pre-execution disk space verification.
+  - Custom CPU load profiles (e.g., `Nice 19`) to avoid impacting production servers.
+  - 5-second emergency cancellation countdown.
+- **Automated Collection**: Generates a random directory and a temporary public link for easy backup downloading.
 
+---
+
+## 🚀 Quick Start
+
+No need to clone the repository. You can run the migrator directly on the server where the emails are located.
+
+### 1. Access the user's mail directory
+Navigate to the root of the email account (where `cur`, `new`, and `tmp` folders are located):
 ```bash
-cd /caminho/para/o/maildir/do/usuario
+cd /home/user/mail/domain.com/account/ (or equivalent)
 ```
 
-### 2. Execute o Migrador
-Execute o comando abaixo:
+### 2. Run the Migrator
 ```bash
 bash <(curl -sSL https://raw.githubusercontent.com/sr00t3d/maildir-to-mbox/main/maildir-mbox.sh)
 ```
 
-<img width="506" height="128" alt="image" src="https://github.com/user-attachments/assets/4d72fecd-e12c-407b-88d1-9da57c52805b" />
+### 3. Follow the On-Screen Instructions
+The script will prompt for:
+1. CPU usage profile (Low impact vs. Maximum performance).
+2. Confirmation of the destination directory.
 
-### 3. Selecione o perfil da CPU
+---
 
-<img width="395" height="32" alt="image" src="https://github.com/user-attachments/assets/fb7cd5cc-7fe0-4402-a066-6506d66a9443" />
+## 📁 Output Structure
 
-### 4. Aguarde a conversão
-<img width="668" height="170" alt="image" src="https://github.com/user-attachments/assets/7fcb9a1c-8764-401a-ad22-a644f2f94993" />
+The script organizes messy Maildir files into a clean structure:
+- `INBOX.mbox`
+- `Sent.mbox`
+- `Drafts.mbox`
+- `Subfolder.sbd/` (Preserved hierarchy)
 
-### 5. Localize o arquivo gerado
-<img width="444" height="300" alt="image" src="https://github.com/user-attachments/assets/73efbf70-9aff-48a1-bf3f-7497da2ec1d7" />
+---
 
+## ⚠️ Disclaimer
 
-### 📂 Como Restaurar no Thunderbird
-Após o script gerar o link e você baixar o arquivo .tar.gz, siga estes passos:
+> [!WARNING]
+> This software is provided "as-is". While extensively tested in Dovecot environments, **always perform a full backup** of your Maildir directories before running any conversion script. The author is not responsible for any data loss.
 
-Extraia o arquivo no seu computador local.
+---
 
-<img width="582" height="220" alt="image" src="https://github.com/user-attachments/assets/220efb10-7655-45ca-9f66-1d95490da50e" />
+## 🛠️ Requirements
 
-No Thunderbird, vá em Configurações da Conta > Pastas Locais (Local Folders).
+- **OS**: Linux (Debian, Ubuntu, CentOS, RHEL).
+- **Dependencies**: `bash`, `curl`, `python3` (for the internal conversion engine).
+- **Permissions**: Read access to the source Maildir and write access to the destination.
 
-<img width="294" height="129" alt="image" src="https://github.com/user-attachments/assets/4afc8264-a55a-4af0-b8c0-d26827bb997e" />
+## 📚 Detailed Tutorial
 
-Verifique o caminho em Diretório Local.
+For a complete step-by-step guide on how to import the generated files into Thunderbird and troubleshoot common migration issues, check out my full article:
 
-<img width="784" height="111" alt="image" src="https://github.com/user-attachments/assets/60a08d97-71b6-4473-918a-11f940c6bfb0" />
+👉 [**How to migrate Dovecot to Thunderbird using Maildir-to-MBOX**](https://perciocastelo.com.br/blog/how-to-migrate-dovecot-to-thunderbird-using-maildir-to-mbox.html)
 
-Feche o Thunderbird.
+## License 📄
 
-Copie os arquivos extraídos (ex: INBOX_Principal, Sent, Meus-Trabalho) para dentro desta pasta no Windows/Linux/Mac.
-
-<img width="1084" height="260" alt="image" src="https://github.com/user-attachments/assets/a71df04f-a31d-4c8c-9644-3d57d965e3c1" />
-
-Abra o Thunderbird e as pastas e email aparecerão magicamente no menu lateral.
-
-<img width="612" height="277" alt="image" src="https://github.com/user-attachments/assets/ce59d29c-3769-4fda-a146-22e27302cb84" />
-
-Agora mova os emails para as contas existentes em seu aplicativo Thunderbird
-
-### 📋 Requisitos do Servidor
-- Linux (Debian, Ubuntu, CentOS, etc.)
-- Python 3 instalado (nativo na maioria das distros)
-- Permissão de escrita na pasta /tmp e no DocumentRoot do servidor web (opcional para link de download).
-
-### 👤 Autor
-- Percio Andrade: percio@evolya.com.br | perciocastelo@gmail.com
-- Este software é fornecido "no estado em que se encontra", sem garantias de qualquer tipo. Sempre faça backup dos seus dados antes de realizar migrações.
+This project is licensed under the **GNU General Public License v3.0**. See the [LICENSE](LICENSE) file for details.
