@@ -58,10 +58,10 @@ The script organizes messy Maildir files into a clean structure:
 
 ---
 
-## ⚠️ Disclaimer
+## ⚠️ Legal Notice
 
 > [!WARNING]
-> This software is provided "as-is". While extensively tested in Dovecot environments, **always perform a full backup** of your Maildir directories before running any conversion script. The author is not responsible for any data loss.
+> This software is provided "as is". Always make sure to test first in a development environment. The author is not responsible for any misuse, legal consequences, or data impact caused by this tool.
 
 ---
 
@@ -73,7 +73,7 @@ The script organizes messy Maildir files into a clean structure:
 
 ## 📚 Detailed Tutorial
 
-For a complete step-by-step guide on how to import the generated files into Thunderbird and troubleshoot common migration issues, check out my full article:
+For a complete step-by-step guide, check out my full article:
 
 👉 [**How to migrate Dovecot to Thunderbird using Maildir-to-MBOX**](https://perciocastelo.com.br/blog/how-to-migrate-dovecot-to-thunderbird-using-maildir-to-mbox.html)
 
