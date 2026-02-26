@@ -6,7 +6,7 @@
 ![Shell Script](https://img.shields.io/badge/language-Bash-green.svg)
 ![Compatibility](https://img.shields.io/badge/compatible-Dovecot%20%7C%20Thunderbird-blue)
 
-<img width="700" alt="Maildir to MBOX Converter" src="https://github.com/user-attachments/assets/a7af7e1c-3a4b-4284-b9b8-7bfaa5970dc1" />
+<img width="700" src="maildir-to-mbox-cover.webp" />
 
 Professional script designed to automate the conversion of **Maildir (Dovecot)** email boxes to the **MBOX** format, natively compatible with **Mozilla Thunderbird**, preserving 100% of the folder hierarchy.
 
