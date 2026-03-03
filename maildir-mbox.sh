@@ -1,18 +1,16 @@
-#!/bin/bash
-################################################################################
-#                                                                              #
-#   PROJECT: Maildir to Thunderbird Converter                                  #
-#   VERSION: 2.0.0                                                             #
-#                                                                              #
-#   AUTHOR:  Percio Andrade                                                    #
-#   CONTACT: percio@evolya.com.br                                              #
-#   WEB:     https://perciocastelo.com.br | contato@perciocastelo.com.br       #
-#                                                                              #
-#   INFO:                                                                      #
-#   Converts Dovecot Maildir structure to Thunderbird native MBOX format.      #
-#   Handles empty folders and creates a web-accessible backup link.            #
-#                                                                              #
-################################################################################
+#!/usr/bin/env bash
+# ╔═══════════════════════════════════════════════════════════════════════════╗
+# ║                                                                           ║
+# ║   Maildir to MBOX Converter v2.0.0                                        ║
+# ║                                                                           ║
+# ╠═══════════════════════════════════════════════════════════════════════════╣
+# ║   Autor:   Percio Castelo                                                 ║
+# ║   Contato: percio@evolya.com.br | contato@perciocastelo.com.br            ║
+# ║   Web:     https://perciocastelo.com.br                                   ║
+# ║                                                                           ║
+# ║   Função:  Converts Dovecot Maildir structure to MBOX native format.      ║
+# ║                                                                           ║
+# ╚═══════════════════════════════════════════════════════════════════════════╝
 
 # --- CONFIGURATION ---
 TMP_DIR="/tmp/conv_thunderbird_$(date +%s)_$RANDOM"

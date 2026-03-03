@@ -1,6 +1,6 @@
 # Maildir to MBOX Converter 📧
 
-[Português](README-ptbr.md)
+[BR](README-ptbr.md)
 
 ![License](https://img.shields.io/github/license/sr00t3d/maildir-to-mbox)
 ![Shell Script](https://img.shields.io/badge/language-Bash-green.svg)
