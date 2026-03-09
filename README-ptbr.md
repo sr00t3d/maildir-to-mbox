@@ -1,10 +1,8 @@
-# Conversor de Maildir para MBOX 📧
+# Conversor de Maildir para MBOX
 
 [EN](README.md)
 
-![License](https://img.shields.io/github/license/sr00t3d/maildir-to-mbox)
-![Shell Script](https://img.shields.io/badge/language-Bash-green.svg)
-![Compatibility](https://img.shields.io/badge/compatible-Dovecot%20%7C%20Thunderbird-blue)
+![License](https://img.shields.io/github/license/sr00t3d/maildir-to-mbox) ![Shell Script](https://img.shields.io/badge/language-Bash-green.svg) ![Compatibility](https://img.shields.io/badge/compatible-Dovecot%20%7C%20Thunderbird-blue)
 
 <img width="700" src="maildir-to-mbox-cover.webp" />
 
@@ -12,7 +10,7 @@ Script profissional desenvolvido para automatizar a conversão de caixas de e-ma
 
 ---
 
-## ✨ Principais Funcionalidades
+## Principais Funcionalidades
 
 Diferente de scripts de conversão simples, este migrador foi construído para cenários reais de Administração de Sistemas (SysAdmin):
 
@@ -26,29 +24,44 @@ Diferente de scripts de conversão simples, este migrador foi construído para c
 
 ---
 
-## 🚀 Início Rápido (Quick Start)
+## Início Rápido (Quick Start)
 
-Não é necessário clonar o repositório. Você pode executar o migrador diretamente no servidor onde os e-mails estão localizados.
+### Modo hospedado
 
-### 1. Acesse o diretório de e-mail do usuário
-Navegue até a raiz da conta de e-mail (onde as pastas `cur`, `new`, and `tmp` estão localizadas):
+1. **Baixe o arquivo para o servidor:**
+
 ```bash
-cd /home/user/mail/domain.com/account/ (or equivalent)
+curl -O https://raw.githubusercontent.com/sr00t3d/maildir-to-mbox/main/maildir-mbox.sh
 ```
 
-### 2. Execute o Migrador
+2. **Adicione permissão de execução:**
+
 ```bash
-bash <(curl -sSL https://raw.githubusercontent.com/sr00t3d/maildir-to-mbox/main/maildir-mbox.sh)
+chmod +x maildir-mbox.sh
+```
+
+3. **Execute o script:**
+
+```bash
+./maildir-mbox.sh
+```
+
+### Modo direto
+
+```bash
+bash <(curl -fsSL 'https://raw.githubusercontent.com/sr00t3d/maildir-to-mbox/main/maildir-mbox.sh')
 ```
 
 ### 3. Siga as Instruções na Tela
+
 O script solicitará:
+
 1. O perfil de uso de CPU (Baixo impacto vs. Performance máxima).
 2. Confirmação do diretório de destino.
 
 ---
 
-## 📁 Estrutura de Saída
+## Estrutura de Saída
 
 O script organiza os arquivos Maildir em uma estrutura limpa:
 - `INBOX.mbox`
@@ -58,25 +71,25 @@ O script organiza os arquivos Maildir em uma estrutura limpa:
 
 ---
 
-## ⚠️ Aviso Legal
+## Aviso Legal
 
 > [!WARNING]
 > Este software é fornecido "como está". Certifique-se sempre de testar primeiro em um ambiente de desenvolvimento. O autor não se responsabiliza por qualquer uso indevido, consequências legais ou impacto em dados causado por esta ferramenta.
 
 ---
 
-## 🛠️ Requisitos
+## Requisitos
 
 - **SO**: Linux (Debian, Ubuntu, CentOS, RHEL).
 - **Dependências**: `bash`, `curl`, `python3` (para o motor de conversão interno).
 - **Permissões**: Acesso de leitura ao Maildir de origem e escrita no destino.
 
-## 📚 Tutorial Detalhado
+## Tutorial Detalhado
 
 Para um guia completo passo a passo, confira meu artigo completo:
 
 👉 [**How to migrate Dovecot to Thunderbird using Maildir-to-MBOX**](https://perciocastelo.com.br/blog/how-to-migrate-dovecot-to-thunderbird-using-maildir-to-mbox.html)
 
-## License 📄
+## License
 
 Este projeto está licenciado sob a **GNU General Public License v3.0**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
